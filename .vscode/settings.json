@@ -1,0 +1,6 @@
+{
+    "files.readonlyInclude": {
+        "node_modules/**": true,
+        "dist/*": true,
+    },
+}
