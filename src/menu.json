@@ -1,0 +1,44 @@
+{
+    "food": [
+        {
+            "name": "Anduin River Fish",
+            "description": "Freshly caught fish from the Anduin River, grilled to perfection and served with a side of herbed quinoa and steamed vegetables.",
+            "price": "$20",
+            "image": "./Anduin River Fish.jpeg"
+        },
+        {
+            "name": "Elven Starlight Salad",
+            "description": "A fresh mix of greens, fruits, and nuts, topped with a zesty Elven vinaigrette and garnished with edible flowers.",
+            "price": "$69",
+            "image": "./Elven Starlight Salad.png"
+        },
+        {
+            "name": "Rivendell Roast",
+            "description": "A slow-cooked roast of lamb or beef, served with a side of roasted root vegetables and a drizzle of Elven honey.",
+            "price": "$420",
+            "image": "./Rivendell Roast.png"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Elven Wine",
+            "description": "A crisp and refreshing white wine made from the grapes of the Elven vineyards.",
+            "price": "$12"
+        },
+        {
+            "name": "Dwarven Ale",
+            "description": "A rich and malty beer brewed in the depths of the Dwarven mines.",
+            "price": "$24"
+        },
+        {
+            "name": "Rivendell Mead",
+            "description": "A sweet and honeyed mead made from the nectar of the Elven bees.",
+            "price": "$42"
+        },
+        {
+            "name": "Anduin River Cider",
+            "description": "A refreshing and tangy cider made from the apples of the Anduin Valley.",
+            "price": "$666"
+        }
+    ]
+}
