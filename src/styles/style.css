@@ -17,28 +17,24 @@ header {
 
 footer {
     width: 100vw;
-    background: #f1f1f1;
+    background: darkgray;
     text-align: center;
     padding: 1em 0;
 }
 
 #content {
-    margin-left: auto;
-    margin-right: auto;
     width: 70%;
 }
 
 .home-desc {
-    /* margin: auto; */
     outline: 1px solid rgb(0, 0, 0);
     padding: 1em;
     border-radius: 1em;
+    font-size: 1.5em;
 }
 
 .menu-item {
     display: flex;
-    margin: 1em;
-
     outline: 1px solid rgb(0, 0, 0);
     border-radius: 1em;
     padding: 1em;
@@ -67,6 +63,46 @@ footer {
             width: 100%;
             border-radius: 100%;
             aspect-ratio: 1/1;
+        }
+    }
+}
+
+
+
+
+div,
+section {
+    padding: 1em;
+}
+
+#TEST {
+    outline: rgb(13, 13, 13) 1px solid;
+}
+
+
+#TEST {
+    resize: both;
+    overflow: auto;
+
+    * {
+        outline: rgb(13, 13, 13) 1px solid;
+    }
+
+    #main-container {
+        resize: both;
+        overflow: auto;
+
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: 7fr 3fr;
+        gap: 1em;
+        padding: 1em;
+
+        #right {
+            img {
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
         }
     }
 }
