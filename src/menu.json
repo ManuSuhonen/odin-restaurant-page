@@ -23,22 +23,26 @@
         {
             "name": "Elven Wine",
             "description": "A crisp and refreshing white wine made from the grapes of the Elven vineyards.",
-            "price": "$12"
+            "price": "$12",
+            "image":"./Elven Wine.jpeg"
         },
         {
             "name": "Dwarven Ale",
             "description": "A rich and malty beer brewed in the depths of the Dwarven mines.",
-            "price": "$24"
+            "price": "$24",
+            "image":"./Dwarven Ale.jpeg"
         },
         {
             "name": "Rivendell Mead",
             "description": "A sweet and honeyed mead made from the nectar of the Elven bees.",
-            "price": "$42"
+            "price": "$42",
+            "image":"./Rivendell Mead.jpeg"
         },
         {
             "name": "Anduin River Cider",
             "description": "A refreshing and tangy cider made from the apples of the Anduin Valley.",
-            "price": "$666"
+            "price": "$666",
+            "image":"./Anduin River Cider.jpeg"
         }
     ]
 }

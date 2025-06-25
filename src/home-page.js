@@ -1,17 +1,6 @@
 import { homeBtn, contentPage, removeChildren } from "./common.js";
 console.log('--------> home-page.js loaded <--------');
 
-
-const menuItems = [
-    { name: "Steak", price: "$20", description: "Juicy grilled steak." },
-    { name: "Salad", price: "$10", description: "Fresh garden salad." },
-    {
-        name: "Elven Starlight Salad", price: "$100",
-        description: "A fresh mix of greens, fruits, and nuts, topped with a zesty Elven vinaigrette and garnished with edible flowers"
-    },
-    // ...hundreds more...
-];
-
 let title = document.createElement('p');
 title.textContent = "Home Page";
 
@@ -29,12 +18,10 @@ description.className = 'home-desc';
 
 homeBtn.addEventListener('click', (event) => {
     loadHome();
-    console.log('Home Page clicked');
 });
 
 function loadHome() {
     removeChildren();
-    // contentPage.appendChild(title);
     contentPage.appendChild(description);
 }
 

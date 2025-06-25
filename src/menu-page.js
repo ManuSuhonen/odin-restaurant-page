@@ -1,53 +1,40 @@
 import { menuBtn, contentPage, removeChildren } from "./common.js";
 import menuData from "./menu.json";
 const foodImages = require.context('./assets/images', false, /\.(png|jpe?g|svg)$/);
-
-console.log('--------> menu-page.js loaded <--------');
-
-let text = document.createElement('p');
-text.textContent = "Menu Page";
-
-menuBtn.addEventListener('click', (event) => {
-    removeChildren();
-    contentPage.appendChild(text);
-    console.log('Menu Page clicked');
-});
+const foodTemplate = document.querySelector('#menu-template').content;
 
 function createMenuItem({ name, price, description, image }) {
-    const item = document.createElement('div');
-    item.className = 'menu-item';
+    let menu = foodTemplate.cloneNode(true);
 
-    const detail = document.createElement('div');
-    detail.className = 'detail';
+    menu.querySelector('.food-item-title').textContent = name;
+    menu.querySelector('.food-item-description').textContent = description;
+    menu.querySelector('.food-item-price').textContent = price;
+    menu.querySelector('.food-item-image').src = foodImages(image);
+    return menu;
+}
 
-    const title = document.createElement('p');
-    title.className = 'menu-item-name';
 
-    const priceEl = document.createElement('p');
-    priceEl.className = 'menu-item-price';
-
-    const desc = document.createElement('p');
-    desc.className = 'menu-item-desc';
-    
-    const imgHolder = document.createElement('div');
-    imgHolder.className = 'menu-image'
-    
-    const img = document.createElement('img');
-    img.src = foodImages(image);
-    imgHolder.appendChild(img)
-
-    title.textContent = name;
-    priceEl.textContent = price;
-    desc.textContent = description;
-    detail.append(title, priceEl, desc);
-    item.append(detail, imgHolder)
+function createH2Item(text) {
+    let item = document.createElement('h2');
+    item.textContent = text;
     return item;
+}
+
+function fillMenu() {
+    contentPage.appendChild(createH2Item('Menu'));
+
+    menuData.food.forEach(itemData => {
+        contentPage.appendChild(createMenuItem(itemData));
+    });
+
+    contentPage.appendChild(createH2Item('Drinks'));
+
+    menuData.drinks.forEach(itemData => {
+        contentPage.appendChild(createMenuItem(itemData));
+    });
 }
 
 menuBtn.addEventListener('click', (event) => {
     removeChildren();
-    menuData.food.forEach(itemData => {
-        contentPage.appendChild(createMenuItem(itemData));
-    });
-    console.log('Menu Page clicked');
+    fillMenu();
 });

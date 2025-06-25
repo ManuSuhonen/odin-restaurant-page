@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
@@ -8,100 +7,58 @@
 
 body {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    align-self: center;
 }
 
 header {
     display: flex;
     justify-content: space-evenly;
+    width: 100vw;
 }
 
 footer {
     width: 100vw;
-    background: darkgray;
     text-align: center;
     padding: 1em 0;
 }
 
-#content {
-    width: 70%;
-}
+main {
+    height: 100%;
+    max-width: 70%;
+    align-self: center;
+    min-width: min-content;
 
-.home-desc {
-    outline: 1px solid rgb(0, 0, 0);
-    padding: 1em;
-    border-radius: 1em;
-    font-size: 1.5em;
-}
-
-.menu-item {
-    display: flex;
-    outline: 1px solid rgb(0, 0, 0);
-    border-radius: 1em;
-    padding: 1em;
-
-    .detail {
-        flex-basis: 70%;
-
-        .menu-item-name {
-            font-size: 2em;
-            font-weight: 500;
-        }
-
-        .menu-item-price {
-            font-size: 1.5em;
-        }
-
-        .menu-item-desc {
-            font-size: 2em;
-        }
-    }
-
-    .menu-image {
-        flex-basis: 30%;
-
-        img {
-            width: 100%;
-            border-radius: 100%;
-            aspect-ratio: 1/1;
-        }
-    }
-}
-
-
-
-
-div,
-section {
-    padding: 1em;
-}
-
-#TEST {
-    outline: rgb(13, 13, 13) 1px solid;
-}
-
-
-#TEST {
-    resize: both;
-    overflow: auto;
-
-    * {
-        outline: rgb(13, 13, 13) 1px solid;
-    }
-
-    #main-container {
-        resize: both;
-        overflow: auto;
-
-        /* display: flex; */
-        display: grid;
-        grid-template-columns: 7fr 3fr;
-        gap: 1em;
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 1em;
+        gap: 1em;
 
-        #right {
-            img {
+        section {
+            padding: 1em;
+        }
+
+        .food-item {
+            outline: solid black 1px;
+            display: flex;
+            width: 90%;
+            gap: 1em;
+
+            .food-item-left {
                 width: 100%;
-                aspect-ratio: 1/1;
+            }
+            .food-item-right {
+                img {
+                    height: 10em;
+                    border-radius: 100%;
+                    aspect-ratio: 1/1;
+                }
             }
         }
     }
